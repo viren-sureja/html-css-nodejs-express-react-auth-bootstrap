@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+	line-height: 1.6em;
+	font-family: Roboto;
+	background-color: rgb(214, 214, 214);
+	font-size: 20px;
+	color: white;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden; /* so that if size increases it will not make scroll bar */
+
+	/* border: 0px;
+	padding: 0.1%;
+	padding-left: 5%; */
+}
+
+.clr {
+	clear: both;
+}
+
+#main-header {
+	background-color: rgb(252, 121, 45);
+	color: white;
+	/* font-size: 30px; */
+}
+
+#navbar {
+	color: white;
+	background-color: rgb(36, 36, 36);
+	/* font-weight: 400; */
+}
+
+#navbar ul {
+	list-style: none;
+	/* display: flex; */
+	padding: 0;
+}
+
+#navbar ul li {
+	display: inline;
+	/* padding-right: 2%; */
+}
+#navbar a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding-right: 15px;
+}
+
+#showcase {
+	color: white;
+
+	background-image: url('https://www.geeklawblog.com/wp-content/uploads/sites/528/2018/12/liprofile-656x369.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	min-height: 300px;
+	text-align: center;
+	/* font-size: 2em; */
+}
+
+#showcase h1 {
+	color: white;
+	font-size: 50px;
+	line-height: 1.6em;
+	padding-top: 30px;
+}
+
+#main {
+	/* margin-top: 2%; */
+	float: left;
+	padding: 0 30px;
+	width: 70%;
+	box-sizing: border-box;
+}
+#sidebar {
+	float: right;
+	/* margin-top: 2%; */
+	/* padding: 0 30px; */
+
+	width: 30%;
+	background-color: rgb(168, 168, 168);
+	color: white;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#main-footer {
+	background-color: rgb(56, 56, 56);
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 40px;
+	/* position: absolute;
+	bottom: 0px;
+	width: 100%; */
+}
+
+@media (max-width: 600px) {
+	#main {
+		float: none;
+		width: 100%;
+	}
+	#sidebar {
+		float: none;
+		width: 100%;
+	}
+}

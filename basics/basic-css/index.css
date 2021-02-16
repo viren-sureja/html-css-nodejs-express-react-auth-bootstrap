@@ -1,0 +1,194 @@
+/* * {
+	margin: 0;
+	padding: 0;
+} */
+
+body {
+	background-color: #f8f1f1;
+	color: #000000;
+
+	/* font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal; */
+	/* same as above */
+	font: normal 16px Arial, Helvetica, sans-serif;
+
+	line-height: 1.6em;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color: red;
+}
+a:active {
+	color: green;
+}
+/* a:visited {
+	color: black;
+} */
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+/* or we can also use */
+/* .my-form input[type="submit"] */
+.button {
+	background-color: #000000;
+	color: white;
+	border: none;
+	padding: 10px 15px;
+}
+
+.button:hover {
+	background-color: red;
+	color: white;
+}
+
+.clr {
+	clear: both;
+}
+
+.box-1 {
+	background-color: black;
+	color: #fff;
+	border-right: 5px red solid;
+	border-left: 5px red solid;
+	border-bottom: 5px red solid;
+	border-top: 5px red solid;
+
+	padding: 20px;
+	margin: 10px;
+}
+
+.box-1 h1 {
+	font-family: tahoma;
+	font-weight: 800;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	word-spacing: 1em;
+}
+
+.box-2 {
+	border: 5px grey dotted;
+	padding: 10px 5px;
+	margin: 10px;
+	color: black;
+}
+.categories {
+	border: 3px #ccc solid;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 15px;
+}
+
+.categories h2 {
+	text-align: center;
+}
+
+.categories ul {
+	padding: 0px;
+	list-style: square;
+	list-style: none;
+}
+
+.categories li {
+	padding-bottom: 6px;
+	border-bottom: dotted 1px #333;
+	list-style-image: url('images/check.png');
+}
+
+.my-form {
+	padding: 20px;
+}
+.my-form .form-group {
+	padding-bottom: 15px;
+}
+.my-form label {
+	display: block;
+}
+
+.my-form input {
+	padding: 8px;
+	width: 100%;
+}
+
+.block {
+	float: left;
+	width: 28.33%;
+	border: 1px dotted grey;
+	padding: 2.5%;
+	margin: 2.5%;
+	box-sizing: border-box;
+	/* Include's padding and border in the element's total width and height */
+}
+
+#main-block {
+	float: left;
+	width: 70%;
+}
+
+#sidebar {
+	float: right;
+	width: 30%;
+	background-color: grey;
+	color: white;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.p-box {
+	height: 500px;
+	width: 800px;
+	border: 1px solid black;
+	margin-top: 30px;
+	position: relative;
+
+	background-image: url('images/om.png');
+	background-repeat: no-repeat;
+	background-position: 100px 200px;
+	background-position: center top;
+	background-size: 100% 100%;
+	/* background-size: auto; */
+}
+
+.p-box h1 {
+	/* as relative position is not mentioned in p-box hence below position will account whole document to be considered */
+	position: absolute;
+	top: 40px;
+	left: 300px;
+}
+
+.p-box h2 {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
+
+.fix-me {
+	position: fixed;
+	/* codeforces has similar upper arrow */
+	top: 400px;
+}
+
+.my-list li:first-child {
+	color: red;
+}
+
+.my-list li:last-child {
+	color: blue;
+}
+
+.my-list li:nth-child(5) {
+	color: orange;
+}
+.my-list li:nth-child(even) {
+	background: lightgrey;
+}
