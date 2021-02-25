@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
 	// basic learning
 
@@ -45,7 +42,7 @@ const Home = () => {
 
 // how to use useState hook
 const Home = () => {
-	const [name, setName] = useState('mario'); // we made "name" reactive using useState hook
+	const [name, setName] = useState('mario'); // we made "name" reactive using useState hook "setName"
 	const [age, setAge] = useState(25);
 	const handleClick = () => {
 		setName('luigi');
@@ -64,3 +61,16 @@ const Home = () => {
 		</div>
 	);
 };
+
+// reusing component with filter of only mario's blogs.
+<BlogList
+	blogs={blogs.filter((blog) => blog.author === 'mario')}
+	title="Mario's Blogs"
+/>;
+
+// this function run every render
+useEffect(() => {
+	console.log('useEffect is ran!');
+}, [name]);
+// empty array [] means run single time at starting render
+// [names] means run at (starting render + when name changes)

@@ -14,5 +14,9 @@
 6. onClick={<function>()} // paranthesis will invoke directly
    onClick={<function>} // this will wait for the event to happen
    // and to pass any parameter
-   onClick={()=> {<function>(parameter1, parameter2)}}
+   onClick={() => {<function>(parameter1, parameter2)}}
    // this will not invoke itself as we haven't used paranthesis and will run when we click.
+7. props are used to transfer properties from parent to child component
+8. in react part the arrow function is like: const function_name = () => ();
+9. useState is one of the type of hooks ohter are: useEffect
+10.

@@ -1,36 +1,31 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import BlogList from './BlogList';
 
 const Home = () => {
 	const [blogs, setBlogs] = useState([
 		{ title: 'My new blog', body: 'lorem ipsum...', author: 'viren', id: 1 },
-		{
-			title: 'Welcome to roadmap',
-			body: 'lorem ipsum...',
-			author: 'vidan',
-			id: 2,
-		},
-		{
-			title: 'plz support me!',
-			body: 'lorem ipsum...',
-			author: 'krish',
-			id: 3,
-		},
-		{
-			title: 'feeling lucky :)',
-			body: 'lorem ipsum...',
-			author: 'shiv',
-			id: 4,
-		},
+		{ title: 'Welcome user', body: 'lorem ipsum...', author: 'mario', id: 2 },
+		{ title: 'support me!', body: 'lorem ipsum...', author: 'krish', id: 3 },
+		{ title: 'i"m lucky', body: 'lorem ipsum...', author: 'mario', id: 4 },
 	]);
+	const [name, setName] = useState('mario');
+
+	const handleDelete = (id) => {
+		const newBlogs = blogs.filter((blog) => blog.id !== id);
+		setBlogs(newBlogs);
+	};
+
+	useEffect(() => {
+		console.log('useEffect is ran!');
+	}, []);
 
 	return (
 		<div className="home">
-			{blogs.map((blog) => (
-				<div className="blog-preview" key={blog.id}>
-					<h2>{blog.title}</h2>
-					<p>Written by {blog.author}</p>
-				</div>
-			))}
+			<BlogList
+				blogs={blogs}
+				title="All Blogs"
+				handleDelete={handleDelete}
+			/>
 		</div>
 	);
 };
