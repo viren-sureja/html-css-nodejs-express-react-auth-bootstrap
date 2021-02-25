@@ -74,3 +74,17 @@ useEffect(() => {
 }, [name]);
 // empty array [] means run single time at starting render
 // [names] means run at (starting render + when name changes)
+
+// we can pass function as prop
+<BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />;
+const handleDelete = (id) => {
+	const newBlogs = blogs.filter((blog) => blog.id !== id);
+	setBlogs(newBlogs);
+};
+
+/* use blogs && to avoid load data when it is null so will fetch from json server and display. */
+{
+	blogs && (
+		<BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
+	);
+}

@@ -19,4 +19,4 @@
 7. props are used to transfer properties from parent to child component
 8. in react part the arrow function is like: const function_name = () => ();
 9. useState is one of the type of hooks ohter are: useEffect
-10.
+10.   useFetch.js is custom state-hook so that we can use repeatedly but remember to name in such a way useFetch.
