@@ -33,3 +33,6 @@
 -  use <Link> instead of <a> to avoid request to server and load directly from react bundle.
    ref: https://tinyurl.com/yvb7ud4s
 -  error occured as shown above in the video, now to avoid that error we use cleanup function with abortController
+-  history.go(-1); // means to go back one time.
+   history.push('/'); // means redirect to home page
+-  blogs.slice(0).reverse().map() // slice(0) means copy of array from 0 to last element and reverse it.

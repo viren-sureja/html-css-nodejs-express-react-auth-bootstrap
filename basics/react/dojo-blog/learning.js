@@ -88,3 +88,12 @@ const handleDelete = (id) => {
 		<BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} />
 	);
 }
+
+// to handle props
+// const BlogList = (props) => {
+const BlogList = ({ blogs, title, handleDelete }) => {
+	// another way to take props from parent component
+	// props takes all the argument at a time
+	// const blogs = props.blogs;
+	// const title = props.title;
+};
