@@ -36,3 +36,4 @@
 -  history.go(-1); // means to go back one time.
    history.push('/'); // means redirect to home page
 -  blogs.slice(0).reverse().map() // slice(0) means copy of array from 0 to last element and reverse it.
+-  <Route path="*"> means to catch any route which is different/not matched in above routes
