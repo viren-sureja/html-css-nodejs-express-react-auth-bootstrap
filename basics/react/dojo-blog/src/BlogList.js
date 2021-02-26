@@ -1,19 +1,20 @@
-// const BlogList = (props) => {
-const BlogList = ({ blogs, title, handleDelete }) => {
-	// another way to take props from parent component
-	// props takes all the argument at a time
-	// const blogs = props.blogs;
-	// const title = props.title;
+import { Link } from 'react-router-dom';
 
+const BlogList = ({ blogs }) => {
 	return (
 		<div className="blog-list">
-			<h1>{title}</h1>
-			{blogs.map((blog) => (
-				<div className="blog-preview" key={blog.id}>
-					<h2>{blog.title}</h2>
-					<p>Written by {blog.author}</p>
-				</div>
-			))}
+			<h1>All Blogs</h1>
+			{blogs
+				.slice(0)
+				.reverse()
+				.map((blog) => (
+					<div className="blog-preview" key={blog.id}>
+						<Link to={`/blogs/${blog.id}`}>
+							<h2>{blog.title}</h2>
+							<p>Written by {blog.author}</p>
+						</Link>
+					</div>
+				))}
 		</div>
 	);
 };
